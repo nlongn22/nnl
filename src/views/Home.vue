@@ -9,18 +9,19 @@
         }}<span
             class="cursor"
             v-bind:class="{
-                blinking: message === 'Enjoy your stay',
+                blinking: message === 'Enjoy your stay!',
             }"
             >|</span
         >
     </div>
     <div class="description">
-        Hey &#128075;! My name is Nguyen Ngoc Long but most of my friends call
-        me Filip. I'm a full stack web developer who currently lives in Munich,
-        Germany. I am 20 years old and after high school I've decided to take a
-        gap year before entering university to learn German. After finishing
-        high school this summer, I decided to start learning the basics of web
-        development.
+        Hey there &#128075;.
+        <br />
+        My name is Nguyen Ngoc Long but most of my friends call me Filip. I'm a
+        full stack web developer who currently lives in Munich, Germany. I am 20
+        years old and after high school I've decided to take a gap year before
+        entering university to learn German. After finishing high school this
+        summer, I decided to start learning the basics of web development.
         <br />
         <br />
         In my free time (when I'm not learning anything) I like to watch TV
@@ -51,7 +52,7 @@ export default {
                 setTimeout(() => {
                     let interval = setInterval(() => {
                         this.typeWriter(string);
-                        if (this.message === "Enjoy your stay") {
+                        if (this.message === "Enjoy your stay!") {
                             resolve();
                             clearInterval(interval);
                             return;
@@ -67,8 +68,8 @@ export default {
             });
         },
         chainPromises() {
-            this.initTypeWriter("Hello!").then(() =>
-                this.initTypeWriter("Enjoy your stay")
+            this.initTypeWriter("Welcome!").then(() =>
+                this.initTypeWriter("Enjoy your stay!!")
             );
         },
         setTitle() {
