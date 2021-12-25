@@ -60,7 +60,6 @@ a:hover {
     text-decoration: underline;
 }
 .container {
-    width: 100%;
     max-width: 42rem;
     padding: 120px 60px;
     margin-left: auto;
