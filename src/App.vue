@@ -26,19 +26,11 @@ export default {
     --accent-color: #78b7bb;
     --selection-color: #fff1c1;
 }
-* {
-    font-family: "Poppins", sans-serif;
-    color: var(--foreground-color);
-    background-color: var(--background-color);
-}
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-::selection {
-    background: var(--selection-color);
+:root.dark-theme {
+    --background-color: #142d4c;
+    --foreground-color: #ececec;
+    --accent-color: #9fd3c7;
+    --selection-color: #385170;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -52,6 +44,20 @@ a:hover {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
+}
+::selection {
+    background: var(--selection-color);
+}
+* {
+    font-family: "Poppins", sans-serif;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 .container {
     width: 100%;

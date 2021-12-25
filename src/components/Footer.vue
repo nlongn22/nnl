@@ -6,7 +6,7 @@
             title="Go to instagram.com"
             target="_blank"
         >
-            <instagram-icon size="1.5x"></instagram-icon>
+            <i class="fab fa-instagram"></i>
         </a>
         <a
             href="mailto:22nlongn@gmail.com"
@@ -15,7 +15,7 @@
             title="Email 22nlongn@gmail.com"
             target="_blank"
         >
-            <mail-icon size="1.5x"></mail-icon>
+            <i class="far fa-envelope"></i>
         </a>
 
         <a
@@ -24,25 +24,14 @@
             title="Go to github.com"
             target="_blank"
         >
-            <github-icon size="1.5x"></github-icon>
+            <i class="fab fa-github"></i>
         </a>
     </div>
 </template>
 
 <script>
-import {
-    InstagramIcon,
-    MailIcon,
-    GithubIcon,
-} from "@zhuowenli/vue-feather-icons";
-
 export default {
     name: "Footer",
-    components: {
-        InstagramIcon,
-        MailIcon,
-        GithubIcon,
-    },
 };
 </script>
 
@@ -52,6 +41,7 @@ export default {
 }
 .icon {
     transition: 0.3s;
+    font-size: 24px;
 }
 .icon:hover {
     opacity: 0.7;
