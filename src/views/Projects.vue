@@ -112,6 +112,6 @@ li {
 }
 .tech {
     display: flex;
-    column-gap: 15px;
+    column-gap: 10px;
 }
 </style>
