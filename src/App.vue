@@ -20,9 +20,16 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+    --background-color: #fbfbfb;
+    --foreground-color: #808b97;
+    --accent-color: #78b7bb;
+    --selection-color: #fff1c1;
+}
 * {
     font-family: "Poppins", sans-serif;
-    color: #808b97;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
 }
 a {
     text-decoration: none;
@@ -31,9 +38,23 @@ a:hover {
     text-decoration: underline;
 }
 ::selection {
-    background: #fff1c1;
+    background: var(--selection-color);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--foreground-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
 }
 .container {
+    width: 100%;
     max-width: 42rem;
     padding: 120px 60px;
     margin-left: auto;

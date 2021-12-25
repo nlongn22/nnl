@@ -110,7 +110,7 @@ export default {
 }
 .cursor {
     font-weight: 400;
-    color: #78b7bb;
+    color: var(--accent-color);
 }
 .cursor.blinking {
     animation: blink 1s steps(2) infinite;

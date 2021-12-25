@@ -95,7 +95,7 @@ export default {
 
 <style scoped>
 a {
-    color: #78b7bb;
+    color: var(--accent-color);
 }
 .projects {
     display: flex;

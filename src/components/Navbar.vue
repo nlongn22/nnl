@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 * {
-    color: #78b7bb;
+    color: var(--accent-color);
 }
 .navbar {
     display: flex;
