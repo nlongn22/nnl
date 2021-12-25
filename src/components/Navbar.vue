@@ -67,6 +67,15 @@ export default {
     },
     mounted() {
         this.setTheme(this.getMediaPreference());
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", (e) => {
+                if (e.matches) {
+                    this.setTheme("dark-theme");
+                } else {
+                    this.setTheme("light-theme");
+                }
+            });
     },
 };
 </script>
