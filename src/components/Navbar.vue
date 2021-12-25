@@ -41,16 +41,6 @@ export default {
         };
     },
     methods: {
-        getMediaPreference() {
-            let prefersDark = window.matchMedia(
-                "(prefers-color-scheme: dark)"
-            ).matches;
-            if (prefersDark) {
-                return "dark-theme";
-            } else {
-                return "light-theme";
-            }
-        },
         toggleTheme() {
             let currentTheme = localStorage.getItem("current-theme");
             if (currentTheme === "light-theme") {
@@ -64,18 +54,31 @@ export default {
             localStorage.setItem("current-theme", theme);
             document.documentElement.className = theme;
         },
+        getMediaPreference() {
+            let prefersDark = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+            if (prefersDark) {
+                return "dark-theme";
+            } else {
+                return "light-theme";
+            }
+        },
+        checkCurrentTheme() {
+            window
+                .matchMedia("(prefers-color-scheme: dark)")
+                .addEventListener("change", (e) => {
+                    if (e.matches) {
+                        this.setTheme("dark-theme");
+                    } else {
+                        this.setTheme("light-theme");
+                    }
+                });
+        },
     },
     mounted() {
         this.setTheme(this.getMediaPreference());
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (e) => {
-                if (e.matches) {
-                    this.setTheme("dark-theme");
-                } else {
-                    this.setTheme("light-theme");
-                }
-            });
+        this.checkCurrentTheme();
     },
 };
 </script>
