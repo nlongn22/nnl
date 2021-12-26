@@ -105,7 +105,7 @@ a {
 .project {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: baseline;
 }
 li {
     padding-left: 15px;

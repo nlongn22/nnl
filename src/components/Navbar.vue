@@ -102,7 +102,6 @@ export default {
 }
 #moon {
     color: var(--foreground-color);
-    background-color: var(--background-color);
     transition: 0.3s;
 }
 #moon:hover {
