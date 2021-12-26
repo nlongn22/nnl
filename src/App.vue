@@ -27,10 +27,10 @@ export default {
     --selection-color: #fff1c1;
 }
 :root.dark-theme {
-    --background-color: #142d4c;
-    --foreground-color: #ececec;
-    --accent-color: #9fd3c7;
-    --selection-color: #385170;
+    --background-color: #232931;
+    --foreground-color: #eeeeee;
+    --accent-color: #4ecca3;
+    --selection-color: #393e46;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -48,10 +48,13 @@ export default {
 ::selection {
     background: var(--selection-color);
 }
+body {
+    background-color: var(--background-color);
+    transition: 0.5s;
+}
 * {
     font-family: "Poppins", sans-serif;
     color: var(--foreground-color);
-    background-color: var(--background-color);
 }
 a {
     text-decoration: none;
